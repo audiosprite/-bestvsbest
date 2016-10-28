@@ -77,7 +77,7 @@ const pickFirstIndex = function(tweetArr){
             lastchar === ")"
         ){
             console.log('chose first index based on ending character');
-            afterStartingTypes = tweetArr.slice(i+1, tweetArr.length);
+            afterStartingTypes = afterStartingTypes.slice(i+1, tweetArr.length);
             break;
         }
     }
