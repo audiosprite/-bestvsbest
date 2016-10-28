@@ -1,6 +1,9 @@
 starts with:
 noun
-adjective
+adjective -v
+/jj
+/jjr
+/jjs
 
 not first last:
 /dt
@@ -12,9 +15,9 @@ crossout-/prp
 /rb
 /in
 
-stop at but INCLUDE:
+stop at (see if above list is also stop at):
 /dt (eg 'this'. throw if 'this' is the first latest but stop & create at this index if latest in any further iteration - actually do this for all of em)
-ends with punctuation (. , ! ? ) ] )
-/jj
-/jjr
-/jjs
+ends with punctuation ( . , ! ? ] : )
+/ex
+
+
