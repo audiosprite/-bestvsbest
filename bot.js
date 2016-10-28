@@ -10,8 +10,8 @@ let T = new Twit({
   consumer_key:         '2ytX5U6ddRBdza5UoeVGQyVkD',
   consumer_secret:      '8kOjIL5BY9Qr47R7sK9Jn2zAe5AugnPdpLAkqqsDbneBeWZc3S',
   access_token:         '791849452550094848-k61J9ZlzM5Fo0IF2baar00p4KIBUSwx',
-  access_token_secret:  'N3XmCBhiEKABd5IxGp9qcPhgQeiSET0CYMMLxY6nW10Az',
-  timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
+  access_token_secret:  'N3XmCBhiEKABd5IxGp9qcPhgQeiSET0CYMMLxY6nW10Az'
+//   timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
 })
 
 const chopAfterITB = function(tweetArr){
@@ -104,7 +104,7 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-T.get('search/tweets', { q: '"is the best" since:2013-07-11', count: 100 })
+T.get('search/tweets', { q: '"is the best" since:2010-07-11', count: 100 })
 // , function(err, data, response) {
     .then(function(result){
         let tweetA = result.data.statuses[Math.floor(Math.random() * (101))].text;
@@ -129,7 +129,8 @@ T.get('search/tweets', { q: '"is the best" since:2013-07-11', count: 100 })
         var abeforetags = rita.RiTa.getPosTagsInline(tweetAArr);
         console.log(abeforetags);
 
-        if (!tweetAArr) throw new Error('array A is empty!');
+        console.log(tweetAArr, typeof(tweetAArr));
+        if (tweetAArr === [] || tweetAArr === [''] || !tweetAArr.length) throw new Error('array A is empty!');
 
         for (var i = 0; i < tweetAArr; i++){
             tweetAArr[i] = tweetAArr[i].toLowerCase();
@@ -152,7 +153,8 @@ T.get('search/tweets', { q: '"is the best" since:2013-07-11', count: 100 })
         var bbeforetags = rita.RiTa.getPosTagsInline(tweetBArr);
         console.log(bbeforetags);
 
-        if (!tweetBArr) throw new Error('array A is empty!');
+        console.log(tweetBArr, typeof(tweetBArr));
+        if (tweetBArr === [] || tweetBArr === [''] || !tweetBArr.length) throw new Error('array A is empty!');
 
         for (var i = 0; i < tweetBArr; i++){
             tweetBArr[i] = tweetBArr[i].toLowerCase();
