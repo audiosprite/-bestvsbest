@@ -1,0 +1,20 @@
+starts with:
+noun
+adjective
+
+not first last:
+/dt
+crossout-/prp
+/cc
+/wp
+/in
+/vbp
+/rb
+/in
+
+stop at but INCLUDE:
+/dt (eg 'this'. throw if 'this' is the first latest but stop & create at this index if latest in any further iteration - actually do this for all of em)
+ends with punctuation (. , ! ? ) ] )
+/jj
+/jjr
+/jjs
